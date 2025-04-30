@@ -1,6 +1,6 @@
 # Code to extract skill & competencies
 
-Python code to convert skills and competency categories from CSV to YAML format.
+[Python code](./code) to convert skills and competency categories from CSV to YAML format.
 
 ## Usage
 
