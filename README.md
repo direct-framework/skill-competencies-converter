@@ -9,7 +9,7 @@ Usage:
   python convert-skills.py <csv_file>
   python convert-skills.py <google_sheet_id> <sheet_name>
 ```
-
+The script will print out the results in YAML format on `stdout`.
 
 From a local file:
 
