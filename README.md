@@ -6,8 +6,8 @@
 
 ```bash
 Usage:
-  python script.py <csv_file>
-  python script.py <google_sheet_id> <sheet_name>
+  python onvert-skills.py <csv_file>
+  python onvert-skills.py <google_sheet_id> <sheet_name>
 ```
 
 
