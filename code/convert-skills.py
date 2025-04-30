@@ -52,8 +52,8 @@ if __name__ == '__main__':
         csv_content = read_csv_from_file(filename)
     else:
         print("Usage:")
-        print("  python script.py <csv_file>")
-        print("  python script.py <google_sheet_id> <sheet_name>")
+        print("  python convert-skills.py <csv_file>")
+        print("  python convert-skills.py <google_sheet_id> <sheet_name>")
         sys.exit(1)
 
     output = parse_csv(csv_content)
