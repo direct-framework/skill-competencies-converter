@@ -22,3 +22,6 @@ From a public google sheet:
 ```bash
 python convert-skills.py 1IJydvoI9H-M1TDLakVlIuHb55auUiKKhE6YP8uD_Sso "Competency framework - v0.2" > data.yml
 ```
+## Acknowledgements
+
+The code was written by [Finn Bacall](https://github.com/fbacall/) with small tweaks by [Aleks Nenadic](https://github.com/anenadic/).
