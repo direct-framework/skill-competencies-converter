@@ -3,8 +3,10 @@ import sys
 import yaml
 import urllib.request
 
+
 def is_blank(val):
     return val is None or val.strip() == ''
+
 
 def read_csv_from_url(sheet_id, sheet_name):
     sheet_name_encoded = urllib.parse.quote(sheet_name)
@@ -12,9 +14,11 @@ def read_csv_from_url(sheet_id, sheet_name):
     with urllib.request.urlopen(url) as response:
         return response.read().decode('utf-8')
 
+
 def read_csv_from_file(filename):
     with open(filename, newline='', encoding='utf-8') as f:
         return f.read()
+
 
 def parse_csv(csv_data):
     category = None
@@ -42,8 +46,18 @@ def parse_csv(csv_data):
 
     return output
 
+
+def print_help_message():
+    print("Usage:")
+    print("  python convert-skills.py <csv_file>")
+    print("  python convert-skills.py <google_sheet_id> <sheet_name>")
+    sys.exit(1)
+
+
 if __name__ == '__main__':
-    if len(sys.argv) == 3:
+    if "--help" or "-h" in sys.argv:
+        print_help_message()
+    elif len(sys.argv) == 3:
         sheet_id = sys.argv[1]
         sheet_name = sys.argv[2]
         csv_content = read_csv_from_url(sheet_id, sheet_name)
@@ -51,10 +65,7 @@ if __name__ == '__main__':
         filename = sys.argv[1]
         csv_content = read_csv_from_file(filename)
     else:
-        print("Usage:")
-        print("  python convert-skills.py <csv_file>")
-        print("  python convert-skills.py <google_sheet_id> <sheet_name>")
-        sys.exit(1)
+        print_help_message()
 
     output = parse_csv(csv_content)
     print(yaml.dump(output, allow_unicode=True, sort_keys=False))
