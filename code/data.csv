@@ -1,0 +1,251 @@
+top-level category,subcategory,skill,"tools, languages, methods & behaviours to demonstrate the skill",description,training & resources
+Information and data technologies,,,,,
+,Data management,,,,
+,,Data/database management systems,"MySQL, SQLite, PostgreSQL, SQLServer, Oracle, MongoDB, Redis, DB2, Toad, DBeaver, Azure Data Studio, NoSQL, RDF","Ability to effectively manage, store, retrieve, and analyse information within a database system.",
+,,Data/database query languages,"SQL, GraphQL, XML, XQuery, SPARQL",Ability to use the different database query languages proficiently for managing and manipulating data,
+,,Data architecture/data structure format & design,"UML modeling, MySQL Workbench, Lucidchart, Draw.io, JSON","Ability to plan, model, and implement data systems, ensuring they meet business needs and are scalable, secure, and efficient",
+,,Data acquisition,"OPeNDAP, Globus
+Data Collection Tools (Surveys & Questionnaires) – Google Forms, SurveyMonkey, Qualtrics","Ability to gather, process, and utilise data effectively",
+,,Data cleaning,OpenRefine,"Ability to identify, correct, and remove errors, inconsistencies, and missing values from datasets","Kaggle - Data Cleaning, Libracy Carpentry - Data Cleaning, Data Carpentry - Data Cleaning"
+,,Data protection & ethics,GDPR,"Ability to understand legal frameworks like GDPR, implementing robust security measures, and ensuring ethical data handling practices",Ethics and law - The Turing Way
+,,Data management,"FAIR data, Data Management Plans, DMPonline, Metadata schema & standards, Persistent identifiers (PIDs), Open formats, Data versioning, Data Citation","Ability to effectively manage data throughout its lifecycle, encompassing planning, organization, storage, sharing, and preservation, ensuring data quality, accessibility, and compliance","Data Management Plans | DCC 
+
+ Data Management Plan - The Turing Way
+
+RDMKit
+FAIR RS Course
+
+The FAIR Principles - The Turing Way
+
+Version Control for Data — The Turing Way"
+,,Metadata standards,JSON,"Ability to manage and utilise metadata to ensure data quality, consistency, and discoverability",What are Metadata Standards | DCC
+,,,,,
+,Data Science,,,,
+,,Spreadsheets,"Google Sheets, Excel","Proficiency in using spreadsheet tools for data manipulation, analysis, and visualisation",Data Organisation in Spreadsheets - The Turing Way
+,,Statistics and probability,,"Ability to use mathematical methods to analyse data, draw inferences, and make predictions",
+,,Data mining,,"Proficiency in programming languages, statistical analysis, machine learning algorithms, and data visualisation",
+,,Data wrangling ,,"Ability to effectively extract meaningful information and insights from datasets using various techniques such as data analysis, data cleaning, pattern recognition, and model building",Data Wranglers: Overview - The Turing Way
+,,Big data technologies,"Hadoop, Spark",Proficiency in using big data frameworks for managing and processing large datasets,
+,,Data analysis & visualisation,"Python - Matplotlib, seaborn; R- ggplot2
+SPSS, Stata, SAS, Excel, NVivo, ATLAS.ti, MATLAB","Ability to process, analyse, and interpret data, as well as the ability to communicate findings effectively through visual representations",Data Visualisation - The Turing Way
+Software engineering and development,,,,,
+,Artificial Intelligence (AI),,,,
+,,AI/ML concepts and theory,"Supervised Learning
+Unsupervised Learning
+Reinforcement Learning
+Semi-Supervised Learning 
+Self-Supervised Learning
+Transfer Learning
+Generative Models
+Neural Networks and Deep Learning
+Model Evaluation and Validation
+Natural Language Processing (NLP)
+Computer Vision
+Robotics","Ability required to develop, implement, and manage AI/ML systems and applications",
+,,Machine learning technologies,"TensorFlow
+PyTorch
+scikit-learn
+XGBoost, LightGBM
+Keras
+FastAI
+MLflow
+Apache Spark (MLlib)","Ability to design, build, test, and deploy machine learning models and systems as software applications",Introduction to Machine Learning with Scikit Learn
+,,Generative AI,"Hugging Face Transformers
+OpenAI 
+Diffusers
+TensorFlow-GAN, PyTorch-GAN
+LangChain
+Gradio, Streamlit
+Google Cloud AI, AWS SageMaker, Azure AI
+Prompt Engineering",Ability to leverage AI tools to augment and enhance traditional software development processes,
+,Web & mobile development,,,,
+,,General Web technologies & APIs,"HTTP(S), SSL/TLS, REST, HTML","Ability to understand, use, and implement fundamental technologies for web development and communication",
+,,Web accessibility,WAVE (Web Accessibility Evaluation Tool),"Ability to design and build websites and web applications that are usable by everyone, including individuals with disabilities",
+,,Web Frameworks for Front-End Development,"JavaScript, React, NodeJS, CSS, Sass, Angular, Vue, Nuxt, Svelte, Bootstrap, JQuery, Tailwind, Bulma",Proficiency in using programming tools and libraries to build and maintain the interactive and visual aspects of websites and web applications,
+,,Web Frameworks for Back-End Development,"Django, Flask, Dash, Shiny, Ruby on Rails, FastAPI, Dart/Flutter, React Native, Node, Express, Next, Nest, PHP, Streamlit","Proficiency in server-side programming languages, understanding of database systems, and knowledge of API development",
+,,Mobile app development,"React Native, Xamarin, Flutter, Swift, Dart","Ability to create, test, and deploy mobile applications via use of programming languages, UI/UX design, backend development and testing",
+,Software engineering methodologies & tools,,,,
+,,Compilers,,"Understanding how compilers translate high-level languages into machine code, including concepts like lexical analysis, parsing, and code optimisation",
+,,Writing code/programming languages,"C, C#, C++, Fortran, Java, Julia, Matlab, Python, R, Ruby, Shell/Bash scripting, Makefiles, IDEs (Jupyter Notebooks), JavaScript, Pascal, Rust, TypeScript, YAML, TOML","Skills in writing programming languages involve understanding syntax, algorithms, data structures",Home - Scientific Python Development Guide
+,,Reading and understanding code/documentation,,"Comprehending technical documents to grasp software functionality, architecture, and usage",
+,,Regular expressions,,"Ability to use and understand regular expressions (regex), which are sequences of characters that define a search pattern",
+,,Computer modelling & simulation,,"Ability to contruct and manipulate computer-based mathematical, graphical or algorithmic representations of real life systems or phenomena, for the purpose of conducting computer-based simulations to study, predict or optimise the behaviour of the system(s) / phenomena under consideration.",
+,,"Coding conventions, code formatting and linting tools","JSLint, ESLint, Black, Ruff","Understanding and applying coding standards, using tools to automatically format code, and employing linters",Code Styling and Linting - The Turing Way
+,,Testing methodologies & tools,"Unit testing, Integration testing, System testing, Acceptance testing, Postman, Cypress, Pytest, PyUnit, Jest, Mocha, Jasmine, Karma, Junit, Mockit, Test Driven Development","Ability to design, execute, and analyse tests, covering both manual and automated techniques, and understanding various testing types like functional, performance, and security testing",Code Testing - The Turing Way
+,,Debugging tools,,"Ability to use various techniques and tools to identify, isolate, and fix errors in software code.",
+,,Code review techniques (including pair programming),,"Ability to effectively evaluate and improve the quality of code by understanding the code structure, logic as well as soft skills like clear communication and constructive feedback",
+,,Profiling & optimising code,,"Ability to analyse code execution, identify performance bottlenecks, and implement changes to improve efficiency and responsiveness",
+,,Log analysis,,"Ability to understand log formats, use log analysis tools, identify patterns and anomalies, and interpret log data to diagnose issues and improve system performance.",
+,,Software version control,"Git, Mercurial, SVN, GitHub, GitLab, BitBucket","Ability to effectively use tools and techniques to track, manage, and collaborate on changes to source code, ensuring efficient development and collaboration","Carpentries courses
+Github Documentation
+Version Control - The Turing Way"
+,,Software quality practices & assurance,"Software quality metadata, checklists and tools, FAIR software, CODECHECK, FAIRSoft, CITATION.cff",Expertise in developing and maintaining software that adheres to the good software principles (including FAIR software) and knowledge of tools that test for them. Expertise in ensuring software has the correct behaviour & produces correct outputs,
+,,Documenting code & software,"Markdown, ReadtheDocs, MKDocs, Sphynx, (R)Markdown, Quarto, docstrings, Javadoc, JSDoc","Ability to create clear, concise, and comprehensive technical documentation that communicates the design, functionality, and usage of software products",Diátaxis
+,,Organising and Documenting Software Projects,"README, Guidelines, Code of Conduct etc.
+
+Folder structure","Ability to create clear and concise documentation, design a logical and consistent file structure that facilitates collaboration, navigation, and long-term maintenance","Project Documentation - The Turing Way
+OLS lesson"
+,,Software licensing,,"Technical expertise in license management systems, understanding different license models, and the ability to implement and enforce license agreements","OLS Lesson
+Licensing - The Turing Way
+Choose an open source license
+TLDRLegal"
+,,Packaging & releasing code,"PyPI, conda-forge, Docker Registries (e.g, Dockerhub, GHCR), GitHub releases","Expertise in preparing software for distribution, including compiling, bundling dependencies, versioning, preparing release notes, and creating installable or deployable artifacts (e.g., Docker images, ZIP files, executables)",
+,,Deploying code,"Ansible, Jenkins, GitHub Actions, GitLab CI/CD, Travis CI, Azure DevOps, AWS CodePipeline, Bitbucket Pipelines","Expertise in taking packaged software and making it available in a target environment (e.g., staging, production) - including provisioning infrastructure, configuring services, rolling out updates, handling rollbacks, and ensuring minimal downtime.",Continuous integration - The Turing Way
+,,Containerisation,"Docker, Singularity, Kubernetes","Ability to package, deploy, and manage applications using containers, enabling consistent and reliable execution across diverse environment",
+,,Tool pipeline & automation,"Makefile, Ansible, Jenkins, GitHub Actions, GitLab CI/CD, Travis CI, Azure DevOps, AWS CodePipeline, Bitbucket Pipelines","Expertise in creation and maintenance of automated workflows that build, test, and deploy software",
+,,Environmental impact awareness & measurement,,"Ability to understand the environmental consequences of software development and deployment, including energy consumption, resource usage, and the overall carbon footprint of the software lifecycle",
+,Software/computer science concepts & theory,,,,
+,,Programming paradigms,"Functional Programming, Object-Oriented Programming (OOP), Procedural Programming, Logic Programming",Ability to understand and apply different approaches to structuring and organising code,
+,,"Threads, processes & parallelisation","Multi-threading & Multi-processing (POSIX threads, OpenMP, Python's concurrent.futures)
+Parallel Computing Frameworks (MPI, CUDA, OpenMP, Dask)
+Distributed Computing (Apache Spark, Ray, Kubernetes)
+Synchronisation & Concurrency Control (Locks, Semaphores, Atomic operations), Signals","Ability to design and optimise concurrent and parallel execution using multi-threading, multi-processing, and distributed computing to improve performance and efficiency in software systems.",
+,Software design & architecture,,,,
+,,Requirements gathering,,"Ability to effectively elicit, analyse, and document the needs and requirements of stakeholders, translating them into a clear and actionable set of specifications",
+,,Software patterns ,,"Ability to identify, understand, and apply well-established, reusable solutions to common problems in software development",
+,,Designing APIs,,Ability define and create Application Programming Interfaces (APIs) that effectively facilitate communication between different software systems,
+,,Software architecture,"Entity Relationship Diagrams, Microservices Design, MVC Design, OO Design, UML","Ability to define, design, and implement the foundational structure of a software system",
+,User Interface/User Experience (UI/UX) design,,"PySide, TkInter",,
+,,Designing user interface,Wireframing,"Proficiency in design principles, tools, and an understanding of user behaviour",
+,,Designing user experience,Wireframing,"Understanding user needs through research, creating intuitive interfaces via wireframing and prototyping, and ensuring usability through testing",
+,,Accessibility (for disabled users),Web Content Accessibility Guidelines; color contrast checkers,Ability to design and develop user interfaces and experiences that are usable by people with a wide range of abilities and disabilities,
+ICT infrastructures,,,,,
+,HPC infrastructure,,,,
+,,HPC,"HPC Tier 1 - Tier 3, SLURM, Modules, MPI, 
+OpenMP, CUDA
+OpenACC, DPC++, AWS, Azure, CGroups, Snakemake, Nextflow, Cylc",Ability to leverage high-performance computing systems to solve complex problems,
+,,GPU programming,GPU HPC Tier 1 - Tier 3,Ability to write and optimize software that utilizes the processing power of a Graphics Processing Unit (GPU) for parallel computing tasks,
+,,Batch schedulers,"SLURM (Simple Linux Utility for Resource Management), PBS (Portable Batch System), LSF (Load Sharing Facility), HTCondor, SGE (Sun Grid Engine)","Ability to undestand how to submit, manage, and optimize jobs within a queuing system",
+,Web infrastructure,,,,
+,,Web protocols,"HTTP(S), FTP, TCP/UDP, IP, WebSocket, DNS, SMTP, IMAP, POP3","Ability to understand, implement, and manage the various communication standards that govern data exchange on the web",
+,,Serverless Web applications,"Netlify, Terraform","Proficiency in serverless technologies, understanding of event-driven architectures, and the ability to work with various programming languages and frameworks",
+,,Firewalls,"Windows Defender Firewall, iptables/nftables, pf, AWS WAF (Web Application Firewall), Azure Firewall, Google Cloud Armor, Cloudflare","Ability needed to manage, configure, and maintain firewalls, ensuring network security and compliance",
+,,Web security,"SSL/TLS, IPSec","Ability needed to protect websites, web applications, and web infrastructure from various online threats and vulnerabilities",
+,,Web servers,,Ability needed to manage and maintain the infrastructure that hosts websites and applications,
+,Cloud infrastructure,,,,
+,,Cloud computing,,"Ability needed to work with cloud services, platforms, and technologies",
+,,Virtualisation/virtual machines & container infrastructure,"Docker, VMware, Virtualbox, Oracle VMbox, Microsoft Hyper-V, Singularity/Apptainer","Ability to create, manage, and troubleshoot virtualisation technologies, including the ability to deploy, scale, and monitor applications running within them",
+,General/systems infrastructure,,,,
+,,Communication protocols,TCP/IP,"Understanding how data is transmitted, routed, and received across networks, including troubleshooting network issues, configuring network devices, and implementing security measures",
+,,Network security,"IPSec, SSH/TLS","Technical proficiency in areas like network protocols, firewalls, and security tools, alongside analytical and problem-solving abilities to identify and mitigate threats",
+,,Configuring (server) systems,Ansible,"Ability to understand and implement networking fundamentals, operating systems, server hardware, and security protocols",
+,,Designing/reviewing system architecture/infrastructure,,"Ability to architect and design complex software systems that are scalable, reliable, efficient, and maintainable",
+,,Storage infrastructure,,"Knowledge of hardware, software, and network systems used to store, manage, and access data. See also ""Data Management"" competency.",
+,,Systems administration,"POSIX file permissions, Unix Domain Sockets, firewalls","Abilty to maintain, troubleshoot, and manage computer systems and networks",
+,,Workflow systems,,Ability to effectively manage and optimize the sequence of tasks and processes within a system,
+,,Embedded systems,"Medical devices? Raspberry Pi, Arduino? sensors, controlling actuators, System-on-Chip (SoC)",Knowledge of specialized computer systems designed to control specific functions within a larger device or machine,
+,,Hardware systems,"interconnected computing nodes (servers), fast storage, CPUs, GPUs, memory hierarchies, storage devices, network architecture, high-speed networking, HPC and cloud hardware infrastructures","Knowledge of the physical components (such as interconnected computing nodes (servers), fast storage, CPUs, GPUs, memory hierarchies, storage devices, network architecture and high-speed networking) that support small and large-scale computational tasks",
+Professional skills,,,,,
+,Personal skills,,,,
+,,Analysing / analytical skills / problem solving,,"Ability to break down complex problems, assess data and information critically, and develop effective solutions based on logical reasoning",
+,,Being inquisitive,,"Having natural curiosity and willingness to ask questions, explore new ideas, and seek deeper understanding",
+,,Being enthusiastic,Being positive about ideas and feedback,"Demonstrating a genuine interest, energy, and positive attitude toward tasks, learning, and collaboration",
+,,Adaptability,,"Ability to adjust to new conditions, changes in the environment, or unexpected challenges with flexibility and openness",
+,,Resilience,,"Ability to recover from setbacks, cope with stress, and maintain motivation and focus in the face of difficulties",
+,,Business acumen,,Understanding and application of fundamental business principles to make informed decisions that drive success,
+,,Being ethical and having integrity,,"Acting with honesty, fairness, and respect, and upholding strong moral principles even when it's difficult or inconvenient",
+,,Goal-setting,,"Ability to identify, plan, and work toward achievable objectives, both short- and long-term, with focus and discipline",
+,,Innovation and creativity,,"Ability to think outside the box, generate new ideas, and find novel solutions to problems or opportunities",
+,,Time management / balancing competing project demands,,"Ability to effectively prioritise tasks, manage deadlines, and allocate time across multiple responsibilities without sacrificing quality",
+,,Switching between projects / context switching,,Ability to shift focus between different tasks or projects while maintaining productivity and minimising errors,
+,,"Understanding of mental health, stress and burnout",,"Awareness of emotional well-being, recognising signs of stress or burnout in yourself and others, and applying strategies for maintaining mental health",Task Management for Humans as Self Care: Summary and Setup
+,Interpersonal skills,,,,
+,,Cultural awareness & sensitivity,,"Ability to recognise, respect, and appropriately respond to cultural differences in beliefs, behaviors, and communication styles",
+,,Emotional intelligence & empathy,"Comforting others, respect for others, patience","Ability to understand, manage, and respond to your own emotions and those of others, fostering trust and effective communication",
+,,EDIA awareness & methodologies,Unconscious bias awareness,"Understanding principles of Equity, Diversity, Inclusion, and Accessibility (EDIA), and actively applying inclusive practices in your work and environment",Ally Skills Training
+,,Conflict prevention & resolution,,"Ability to identify potential sources of conflict and address them constructively through communication, compromise, and mediation",
+,Teamwork & collaboration,,,,
+,,"Influencing, persuasion and negotiation",,"Communicating effectively to shape opinions, reach agreements, and achieve mutually beneficial outcomes while respecting others' viewpoints",
+,,Peer review,,"Ability to povide constructive, evidence-based feedback on others’ work to improve quality, foster learning, and uphold standards",
+,,Asking for help / asking to understand / asking questions,,"Willingness to seek clarification, request support, or ask thoughtful questions to enhance understanding and avoid mistakes",
+,,Using collaborative apps/tools for remote work/collaboration,"Slack, Microsoft Teams, Google Docs, GitHub, CodiMD, HedgeDoc","Ability to effectively use collaborative platforms and tools for sharing ideas, files, and real-time collaboration across distances",
+,,"Understanding, extracting and documenting other people's ideas/knowledge",,"Ability to actively listen, ask clarifying questions, and accurately capture and organise another person’s insights or expertise for shared use",
+Leadership & management,,,,,
+,People & team management,,,,
+,,Team management,,"Ability to lead, coordinate, and motivate a group of individuals to achieve common goals",
+,,Team performance management,,"Ability to set goals, monitor progress, provide feedback, and evaluating the performance of team members to improve efficiency and effectiveness",
+,,Hiring people / writing job descriptions,,"Ability to recruite suitable candidates for a position, including the creation of clear and effective job descriptions that outline roles, responsibilities, qualifications, and expectations.",
+,,Team building,,"Ability to bring new people, foster a positive and collaborative environment that strengthens relationships, improves communication, and enhances teamwork within a group.",
+,,Team development,,"Ability to improve skills, knowledge, and overall capabilities in a team through training, mentoring, and other developmental activities",
+,,Recognising/giving credit for people's work,,"Acknowledging and appreciating the contributions and achievements of team members, reinforcing positive behavior and boosting morale",
+,,Shielding colleagues from destructive criticism,,"Protecting team members from unconstructive or harmful feedback by offering support and ensuring criticism is delivered in a constructive, respectful manner",
+,,Understanding others’ goals and motivations,,"Ability to empathise with and gain insight into the personal and professional goals of others, allowing for better collaboration, conflict resolution, and alignment within teams",
+,Leadership,,,,
+,,Mentoring & coaching,,"Providing guidance, support, and advice to a less experienced individual to help them grow personally and professionally",Mentor training
+,,Decision-making,,"Ability to assess information, weigh options, consider potential outcomes, and choose the best course of action in a given situation",
+,,Motivation and inspiration,,"Ability to encourage, energise, and empower others to take action, pursue goals, or strive for continuous improvement",
+,,Grant proposal/business case writing ,,"Understanding the needs and interests of potential funders or decision-makers, articulating the goals and benefits of the proposed project or business case in a clear and persuasive way, and providing strong justification for why it should be supported.  ",
+,,Long-term strategic planning,,"Ability to envision, develop, and implement a roadmap for an organisation or initiative's future direction, goals, and objectives over an extended period (typically 3-5 years or more)",
+,,Leading change,,"Ability to create a shift in mindset and behavior, empowering individuals, and ensuring that the change is sustainable in the long run - drawing on emotional intelligence, strategic thinking, communication, and organisational management.",
+,Project management,,,,
+,,Project governance,"Decision making processes & tools, project governance dashboards","Ability to establish and manage the frameworks, structures, and processes that guide and control projects throughout their lifecycle",
+,,Planning and organisation skills/task management & prioritisation,"Resource allocation & management (time, money/budget/finances, human resources), delegation, monitoring progress
+Software Management Plans, GitHub projects, Asana, Trello, spreadsheets, Gantt charts, other project management tools","Ability to effectively organise, assign, and track the use of resources (such as time, money, and human resources) in a project or organisation to ensure goals are achieved efficiently, within scope, and on schedule",
+,,Project scoping/setting realistic goals,,"Ability to define and clarify the boundaries, objectives, and expected outcomes of a project, ensuring that they are achievable, measurable, and aligned with the available resources",
+,,Project portfolio management,,"Ability to oversee and manage a collection of projects within an organisation to ensure that they align with the strategic goals, priorities, and resource availability",
+,,Project management methodologies,"Agile, Scrum, Waterfall, PRINCE 2","Knowledge of the frameworks, processes, and best practices that guide how a project is planned, executed, monitored, and completed",
+,,Risk management,Risk matrix tools,"Ability to identify, assess, mitigate, and monitor risks that could negatively affect a project, organisation, or process",
+,,Crisis & change management,,"Ability to effectively navigate and manage sudden, unexpected situations (crisis) and significant transformations (change) within an organisation or project",
+,,Event management,"Defining the event’s purpose and goals, creating a timeline, selecting a venue, negotiating prices, budgeting, identifying target audience, sponsorship and fundraising, eco-friendly practices, reducing carbon footprint, registrations, programme scheduling, website, promotion on social media, attendee feedback, event debrief and reporting","Ability to plan, organise, and execute events efficiently, ensuring that all aspects are well-coordinated and meet the goals of the event",
+,,Stakeholder management,,"Ability to manage expectations of different stakeholders (e.g. partners and PIs), negotiation between partner needs and RSE practicalities",
+,,Content and knowledge management,"SharePoint, Google Workspace (Google Drive, Docs, Sheets, etc.), Dropbox, Confluence, WordPress, Trello","Ability to organise, store, share, and leverage information and resources within an organisation or community effectively - easily accessible, well-documented, and utilised in decision-making, problem-solving, and innovation",
+,,Meeting chairing and management,"Setting agenda, guiding discussions, maintaining focus","Ability to effectively lead and facilitate meetings, ensuring they are productive, well-organised, all objectives are achieved and that participants engage in a respectful manner",
+,,Process documentation & improvement,Best practices,"Ability to analyse processes, workflows, procedures, identifying areas for improvement and synthesise best practices ",
+,,Understanding bureaucracy/politics,,"Ability to navigate and make sense of the complex structures, rules, power dynamics, and interpersonal relationships within academic institutions",
+,,"Gathering and understanding (user, funder, stakeholder) requirements",,"Ability to actively listen to and engage with users, funders, or stakeholders to identify their needs, expectations, and constraints - including asking the right questions, clarifying assumptions, and documenting requirements in a way that can guide project planning and delivery",
+,,Converting requirements to tasks ,,"Ability to translate broad or high-level requirements into specific, actionable tasks that can be assigned, tracked, and completed, identifying dependencies, prioritising work, and ensuring each task contributes to the overall goal",
+,,Breaking down problems into smaller tasks,,"Ability to decompose complex challenges into manageable parts to make planning, development, or troubleshooting more efficient and less overwhelming",
+,,Customer engagement,,"Building and maintaining positive relationships with customers or users by communicating clearly, understanding their needs, involving them in the process, gathering feedback and providing value and ensuring satisfaction with the final product or service",
+,,Searching for the best solution for the job,,"Ability to evaluating available options (tools, methods, technologies) and selecting the most effective, efficient, and context-appropriate solution - using critical thinking, awareness of constraints, and a good understanding of both the problem and possible solutions.",
+Domain & research expertise,,,,,
+,Domain knowledge,,,,
+,,Domain-specific background knowledge,,"An understanding of concepts, theories, and best practices within a particular field or discipline",
+,,Translating between software engineering language and stakeholders,"Understanding of both software engineering concepts and domain problems and terminology
+Understanding stakeholder needs and contexts
+Simplifying technical jargon
+Clarifying requirements","Bridging the gap between technical software engineering concepts and the language of non-software-engineer stakeholders, such as researchers, technicians, scientists, or other business or academic teams",
+,,Application/adaptability of technical skills in the domain,,"Ability to effectively apply technical knowledge and skills within a specific domain while being flexible and adaptable to evolving needs, challenges, and technologies",
+,,Information and literature review (critical appraisal),,"Ability to efficiently read, analyse, and synthesise information from various sources (such as academic literature, reports, books, and research papers) and critically assess its relevance, credibility, and quality",
+,Research skills,,,,
+,,Research methodologies,"Qualitative and quantitative approaches, data collection techniques (listed under ""Data collection & acquisition""), experimental design, statistical analysis, and critical evaluation of resources 
+Experiments & Simulations – MATLAB, LabVIEW
+Data Analysis Tools - listed under ""Data analysis and visualisation""
+Reference Management & Literature Review Tools - Zotero, EndNote, Mendeley
+Systematic Literature Review – Rayyan, Covidence
+Research Project Management & Collaboration Tools - Trello, Asana, GitHub
+Writing & Formatting – LaTeX, Overleaf ","Expertise in research methodology - formulating testable predictions based on observations, theories, or existing knowledge and systematically evaluating them through empirical methods",
+,,Reading & understanding research papers,"Finding papers on Google Scholar, ArXiV etc.","Ability to do literature review - find, read and digest relevant research",
+,,Writing research papers,"LaTeX, Overleaf, bibiliography management tools (Zotero, BibTeX, Mendeley, EndNote)","Ability to present research ideas and work in research & scientific publications, including presenting evidence, evaluation, argumentation in academic paper structure",
+,,Ethical responsibility,"GDPR, ethics approvals","Ability to identify potential ethical concerns related to research subjects' welfare, data collection, storage and security methods, informed consent, privacy",https://www.dcc.ac.uk/sites/default/files/documents/publications/3amendedFive%20things.....%20(8-Page).pdf
+,,Legal and regulatory responsibility,"Export control, intelectual property (IP), licensing, GDPR, clinical trials regulations",Understanding of legislation and legal responsibilities when conducting work in specific research areas,"https://www.uwe.ac.uk/study/library/research-support/manage-your-research-data/planning-your-project/know-your-legal-and-ethical-responsibilities
+
+https://www.liverpool.ac.uk/library/research-data-management/essentials/ethical-and-legal/
+
+
+https://researchdata.ox.ac.uk/ethical-and-legal-issues"
+Communication,,,,,
+,Verbal & written communication,,,,
+,,Public speaking and presentation,"Communication with technical audiences/peers
+Communication with non-technical or cross-disciplinary audiences/other scientists
+Communication with general public
+Understanding your audience
+Speaking clearly and confidently","Public speaking, presentation and communication skills for engaging with a diverse audience",Presenting Posters and Conference Talks - The Turing Way
+,,Information synthesis/concise communication,,Ability to summarise and condense information efficiently,
+,,Technical writing,"Producing papers, reports, technical documentation (e.g. user and developer guides for software), LaTeX, Overleaf, 
+ReadtheDocs, MKDocs, Sphynx, (R)Markdown, Quarto","Ability to create clear, concise, and structured technical documentation",
+,,Multimedia & social content production,"Adobe Photoshop, Illustrator, Canva, Adobe Premiere Pro, OBS, YouTube, Mastodon, X, LinkedIn, BlueSky, Podcasts (?)","Ability to create, edit, and manage various forms of digital content across multiple media platforms, e.g. graphic design, audio/video/animation production, social media, etc.",Social Media for Research Communications — The Turing Way
+,,Note taking,Recording clear actions,Ability to document and organise meeting information,
+,,Active listening,,Ability to be an attentive and engaged listener,
+,,Providing positive and constructive feedback,,Ability to offer supportive and insightful feedback,
+,,Assertive declination,,Ability to set boundaries and decline requests assertively and politely,
+,Community & outreach,,,,"SSI Fellowship, OLS, maybe other community management programs, Turing Way handbook, CSCCE"
+,,Peer support,Encouraging people’s ideas,"Providing emotional, social and practical support to other members of a community from fostering mutual understanding, encouragement, and personal growth",
+,,Networking & relationship building,Attending and/or running events to engage with the community,"Establishing connections to exhange knowledge, support and opportunities for growth",
+,,Raising awareness of issues,,"Advocating for issues, e.g. raising awareness of RSE roles",
+,,Community building & leadership,,"Ability to inspire, guide and mobilise people toward a shared vision or a goal",
+,,Community governance & management,"Different community governance structures, organising and setting agenda for meetings, chairing meetings, advertising support and training, tools for engaging and communiting in a community (Slack, Mattermost)","Establishing structures, policies, and processes to guide decision-making, coordination, and engagement within a community",
+,Training,,,,
+,,Self-learning,Learning a new programming language or a tool,Ability to learn independently and teach yourself new technical and non-technical skills and tools,
+,,Knowledge exchange,"Writing onboarding documentation, onboarding new team members, internal presentations, pair programming","Ability to share information, expertise and best practices within a team, organisation or community",
+,,Teaching & training others,Teaching or delivery of short training courses such as Carpentries or CodeRefinery lessons,"Ability to convey theoretical and practical knowledge to others, address misconceptions, etc. in training events",Carpentries Instructor Training
+,,Training material development,Collaborative development of open source training materials,"Solo and collaborative development of various short-format training materials (tutorials, courses, etc.)",Carpentries Collaborative Lesson Development Training
