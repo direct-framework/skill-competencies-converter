@@ -55,7 +55,7 @@ def print_help_message():
 
 
 if __name__ == '__main__':
-    if "--help" or "-h" in sys.argv:
+    if "--help" in sys.argv or "-h" in sys.argv:
         print_help_message()
     elif len(sys.argv) == 3:
         sheet_id = sys.argv[1]
