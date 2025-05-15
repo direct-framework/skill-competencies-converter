@@ -6,7 +6,7 @@
 
 ```bash
 Usage:
-convert-skills.py [-h] [--output-path OUTPUT_PATH] [--print-output | --no-print-output] [inputs ...]
+python convert-skills.py [-h] [--output-path OUTPUT_PATH] [--print-output | --no-print-output] [inputs ...]
 
 Convert skills CSV or Google Sheet to YAML/JSON.
 
