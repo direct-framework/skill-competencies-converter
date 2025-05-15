@@ -30,7 +30,7 @@ The script will print out the results in YAML format on `stdout`.
 From a local file:
 
 ```bash
-python convert-skills.py data.csv --output-path data.yml
+python convert-skills.py data.csv --output-path data.json
 ```
 
 From a public google sheet:
