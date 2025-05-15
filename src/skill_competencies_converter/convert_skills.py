@@ -5,10 +5,17 @@ import os
 import sys
 import urllib.request
 
+
+# Dynamically figure out import (if package is installed, or this script is run directly)
+if __package__:
+    module_name = f"{__package__}.save"
+else:
+    module_name = "save"
+
 # Define the output formats supported, and the relevant function calls.
 SUPPORTED_OUTPUTS = {
-    "yaml": ("save", "save_yaml"),
-    "json": ("save", "save_json"),
+    "yaml": (module_name, "save_yaml"),
+    "json": (module_name, "save_json"),
 }
 
 def is_blank(val):
@@ -60,8 +67,8 @@ def get_parser():
     """
     example_text = """Examples:
 
-    python %(prog)s convert-skills.py <csv_file>
-    python %(prog)s convert-skills.py <google_sheet_id> <sheet_name>"""
+    %(prog)s <csv_file>
+    %(prog)s <google_sheet_id> <sheet_name>"""
     parser = argparse.ArgumentParser(
         description="Convert skills CSV or Google Sheet to YAML/JSON.",
         epilog=example_text,
@@ -107,6 +114,7 @@ def main():
 
     output = parse_csv(csv_content)
 
+    # Get the output extension (whether JSON or yml)
     _, ext = os.path.splitext(args.output_path)
     ext = ext.lower().lstrip(".")
     if ext == "yml":
@@ -116,6 +124,8 @@ def main():
         print(f"Unsupported output file extension. Use one of {supported_extensions}")
         exit(1)
 
+    # Call the relevant output function to output to either JSON/yml
+    # At this time, either `save_json` or `save_yaml`
     module_name, func_name = SUPPORTED_OUTPUTS[ext]
     module = importlib.import_module(module_name)
     save_func = getattr(module, func_name)
