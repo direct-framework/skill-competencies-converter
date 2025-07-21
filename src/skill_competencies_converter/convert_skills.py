@@ -112,7 +112,18 @@ def main():
         parser.print_help()
         sys.exit(1)
 
-    output = parse_csv(csv_content)
+    category_dict = parse_csv(csv_content)
+    # Convert output to lists
+    categories = []
+    for cat_title, cat in category_dict.items():
+        subcategories = []
+        for subcat_title, subcat in cat.items():
+            skills = []
+            for skill_title, skill in subcat.items():
+                skills.append({"title": skill_title, **skill})
+            subcategories.append({"title": subcat_title, "skills": skills})
+        categories.append({"title": cat_title, "subcategories": subcategories})
+    output = {"categories": categories}
 
     # Get the output extension (whether JSON or yml)
     _, ext = os.path.splitext(args.output_path)
