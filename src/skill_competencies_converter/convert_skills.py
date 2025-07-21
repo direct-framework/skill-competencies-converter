@@ -42,6 +42,16 @@ def parse_csv(csv_data):
     reader = csv.reader(csv_data.splitlines())
     headers = next(reader)
 
+    def find_idx(list, str):
+        for i, x in enumerate(list):
+            if str in x.lower():
+                return i
+        raise Exception(f"Couldn't find {str} in {list}")
+
+    desc_idx = find_idx(headers, "desc")
+    tools_idx = find_idx(headers, "tools")
+    training_idx = find_idx(headers, "training")
+
     for row in reader:
         if not is_blank(row[0]):
             category = row[0]
@@ -53,9 +63,9 @@ def parse_csv(csv_data):
             continue
 
         output.setdefault(category, {}).setdefault(subcategory, {}).setdefault(skill, {
-            'description': row[4],
-            'tools_languages_methods_behaviours': row[3],
-            'training_resources': row[5]
+            'description': row[desc_idx],
+            'tools_languages_methods_behaviours': row[tools_idx],
+            'training_resources': row[training_idx]
         })
 
     return output
