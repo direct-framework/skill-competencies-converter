@@ -72,4 +72,4 @@ to the end of the command.
 
 ## Acknowledgements
 
-The code was written by [Finn Bacall](https://github.com/fbacall/) with small tweaks by [Aleks Nenadic](https://github.com/anenadic/).
+The code was written by [Finn Bacall](https://github.com/fbacall/) with small tweaks by [Aleks Nenadic](https://github.com/anenadic/). [Bryn Ubald](https://github.com/bnubald) converted it to a Python package.
