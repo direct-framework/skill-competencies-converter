@@ -42,6 +42,16 @@ def parse_csv(csv_data):
     reader = csv.reader(csv_data.splitlines())
     headers = next(reader)
 
+    def find_idx(list, str):
+        for i, x in enumerate(list):
+            if str in x.lower():
+                return i
+        raise Exception(f"Couldn't find {str} in {list}")
+
+    desc_idx = find_idx(headers, "desc")
+    tools_idx = find_idx(headers, "tools")
+    training_idx = find_idx(headers, "training")
+
     for row in reader:
         if not is_blank(row[0]):
             category = row[0]
@@ -53,9 +63,9 @@ def parse_csv(csv_data):
             continue
 
         output.setdefault(category, {}).setdefault(subcategory, {}).setdefault(skill, {
-            'description': row[4],
-            'tools_languages_methods_behaviours': row[3],
-            'training_resources': row[5]
+            'description': row[desc_idx],
+            'tools_languages_methods_behaviours': row[tools_idx],
+            'training_resources': row[training_idx]
         })
 
     return output
@@ -112,7 +122,18 @@ def main():
         parser.print_help()
         sys.exit(1)
 
-    output = parse_csv(csv_content)
+    category_dict = parse_csv(csv_content)
+    # Convert output to lists
+    categories = []
+    for cat_title, cat in category_dict.items():
+        subcategories = []
+        for subcat_title, subcat in cat.items():
+            skills = []
+            for skill_title, skill in subcat.items():
+                skills.append({"title": skill_title, **skill})
+            subcategories.append({"title": subcat_title, "skills": skills})
+        categories.append({"title": cat_title, "subcategories": subcategories})
+    output = {"categories": categories}
 
     # Get the output extension (whether JSON or yml)
     _, ext = os.path.splitext(args.output_path)
