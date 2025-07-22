@@ -35,9 +35,9 @@ def read_csv_from_file(filename):
 
 
 def parse_csv(csv_data):
-    category = None
-    subcategory = None
-    output = {}
+    output = {
+        'categories': []
+    }
 
     reader = csv.reader(csv_data.splitlines())
     headers = next(reader)
@@ -52,21 +52,33 @@ def parse_csv(csv_data):
     tools_idx = find_idx(headers, "tools")
     training_idx = find_idx(headers, "training")
 
+    category = {}
+    subcategory = {}
     for row in reader:
         if not is_blank(row[0]):
-            category = row[0]
+            category = {
+                'title': row[0],
+                'description': row[desc_idx],
+                'subcategories': []
+            }
+            output['categories'].append(category)
         if not is_blank(row[1]):
-            subcategory = row[1]
+            subcategory = {
+                'title': row[1],
+                'description': row[desc_idx],
+                'skills': []
+            }
+            category['subcategories'].append(subcategory)
         if not is_blank(row[2]):
-            skill = row[2]
+            skill = {
+                'title': row[2],
+                'description': row[desc_idx],
+                'tools_languages_methods_behaviours': [],  # row[tools_idx], - currently set to empty list
+                'training_resources': []  # row[training_idx] - currently set to empty list
+            }
+            subcategory['skills'].append(skill)
         else:
             continue
-
-        output.setdefault(category, {}).setdefault(subcategory, {}).setdefault(skill, {
-            'description': row[desc_idx],
-            'tools_languages_methods_behaviours': [],  # row[tools_idx],
-            'training_resources': [],  # row[training_idx]
-        })
 
     return output
 
@@ -122,18 +134,7 @@ def main():
         parser.print_help()
         sys.exit(1)
 
-    category_dict = parse_csv(csv_content)
-    # Convert output to lists
-    categories = []
-    for cat_title, cat in category_dict.items():
-        subcategories = []
-        for subcat_title, subcat in cat.items():
-            skills = []
-            for skill_title, skill in subcat.items():
-                skills.append({"title": skill_title, **skill})
-            subcategories.append({"title": subcat_title, "skills": skills})
-        categories.append({"title": cat_title, "subcategories": subcategories})
-    output = {"categories": categories}
+    output = parse_csv(csv_content)
 
     # Get the output extension (whether JSON or yml)
     _, ext = os.path.splitext(args.output_path)
