@@ -52,8 +52,6 @@ def parse_csv(csv_data):
     tools_idx = find_idx(headers, "tools")
     training_idx = find_idx(headers, "training")
 
-    category = {}
-    subcategory = {}
     for row in reader:
         if not is_blank(row[0]):
             category = {
