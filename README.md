@@ -16,7 +16,7 @@ from any location.
 
 ## Usage
 
-### Calling via command line interface (If installed as Python package)
+### Via command line interface (if installed as a Python package)
 
 ```bash
 Usage:
@@ -40,28 +40,29 @@ Examples:
     skill_competencies_converter <google_sheet_id> <sheet_name>
 ```
 
-#### From a local file:
+#### Using a local data file
+
 ```bash
 skill_competencies_converter data/data.csv
 ```
 
 By default, if the `--output-path` is not specified, it will output to `data.json`.
 
-#### From a public Google sheet:
+#### Using a public Google sheet with data
 
 ```bash
 skill_competencies_converter 1umVxBzuZGDgins6XqJwuGVf6BK_DgjknhuwDQpNwyjo "Competency framework - v1.0" --output-path data.json
 ```
 
-### Calling the conversion script directly (Legacy)
+### Via command line interface - calling the conversion script directly (legacy)
 
-#### From a local file:
+#### Using a local data file
 
 ```bash
 python src/skill_competencies_converter/convert_skills.py data/data.csv --output-path data.json
 ```
 
-#### From a public google sheet:
+#### Using a public Google sheet with data
 
 ```bash
 python src/skill_competencies_converter/convert_skills.py 1umVxBzuZGDgins6XqJwuGVf6BK_DgjknhuwDQpNwyjo "Competency framework - v1.0" --output-path data.json
