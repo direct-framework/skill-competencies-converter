@@ -24,6 +24,6 @@ def save_yaml(data: dict, output_path: str = "data.yml", print_output: bool = Fa
     if print_output:
         print(yaml_output)
 
-    with open(output_path, "w") as f:
+    with open(output_path, "w", encoding="utf-8") as f:
         f.write(yaml_output)
     return

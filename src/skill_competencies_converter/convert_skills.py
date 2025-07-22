@@ -64,8 +64,8 @@ def parse_csv(csv_data):
 
         output.setdefault(category, {}).setdefault(subcategory, {}).setdefault(skill, {
             'description': row[desc_idx],
-            'tools_languages_methods_behaviours': row[tools_idx],
-            'training_resources': row[training_idx]
+            'tools_languages_methods_behaviours': [],  # row[tools_idx],
+            'training_resources': [],  # row[training_idx]
         })
 
     return output
