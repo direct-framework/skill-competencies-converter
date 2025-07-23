@@ -1,10 +1,12 @@
 categories:
 - title: Information and data technologies
-  description: Knowledge and application of tools, techniques, and systems for managing,
-    analysing, visualising, and interpreting data
+  description: Knowledge and application of tools, techniques, and systems to harness
+    data and drive insight, innovation, and informed decision-making across digital
+    research
   subcategories:
   - title: Data management
-    description: ''
+    description: Understanding and implementation of practices for data management,
+      quality, accessibility, stewardship, and compliance across its lifecycle.
     skills:
     - title: Data/database management systems
       description: Ability to effectively manage, store, retrieve, and analyse information
@@ -47,7 +49,8 @@ categories:
       tools_languages_methods_behaviours: []
       training_resources: []
   - title: Data science
-    description: ''
+    description: Application of analytical, statistical, and machine learning techniques
+      to extract insight and value from complex datasets
     skills:
     - title: Spreadsheets
       description: Proficiency in using spreadsheet tools for data manipulation, analysis,
@@ -92,10 +95,13 @@ categories:
       tools_languages_methods_behaviours: []
       training_resources: []
 - title: Software engineering and development
-  description: ''
+  description: Expertise in the design and development of software solutions that
+    are robust, sustainable, and fit for purpose, enabling scientific and technological
+    progress
   subcategories:
   - title: Web & mobile development
-    description: ''
+    description: Design and development of responsive, secure, and user-centric applications
+      across web and mobile platforms
     skills:
     - title: General Web technologies & APIs
       description: Ability to understand, use, and implement fundamental technologies
@@ -123,7 +129,8 @@ categories:
       tools_languages_methods_behaviours: []
       training_resources: []
   - title: Software engineering methodologies & tools
-    description: ''
+    description: Application of structured approaches, theory and supporting tools
+      to plan, develop, test, and maintain high-quality software systems efficiently
     skills:
     - title: Compilers
       description: Understanding how compilers translate high-level languages into
@@ -262,7 +269,8 @@ categories:
       tools_languages_methods_behaviours: []
       training_resources: []
   - title: Software/computer science concepts & theory
-    description: ''
+    description: Foundational knowledge of computational principles and algorithms
+      that inform software design, development and performance
     skills:
     - title: Programming paradigms
       description: Ability to understand and apply different approaches to structuring
@@ -276,7 +284,8 @@ categories:
       tools_languages_methods_behaviours: []
       training_resources: []
   - title: Software design & architecture
-    description: ''
+    description: Ability to conceptualise and structure software systems to be modular,
+      scalable, maintainable, and aligned with user and stakeholder needs
     skills:
     - title: Requirements gathering
       description: Ability to effectively elicit, analyse, and document the needs
@@ -300,7 +309,8 @@ categories:
       tools_languages_methods_behaviours: []
       training_resources: []
   - title: User Interface/User Experience (UI/UX) design
-    description: ''
+    description: Creating intuitive, inclusive, and engaging digital experiences through
+      thoughtful design and user-centered practices
     skills:
     - title: Designing user interfaces
       description: Proficiency in design principles, tools, and an understanding of
@@ -318,10 +328,13 @@ categories:
       tools_languages_methods_behaviours: []
       training_resources: []
 - title: ICT infrastructures
-  description: ''
+  description: Understanding and oversight of digital infrastructure - encompassing
+    computing, storage, and networks - that underpins research, collaboration, and
+    digital service delivery.
   subcategories:
   - title: HPC infrastructure
-    description: ''
+    description: Knowledge of high-performance computing systems and practices that
+      support intensive computational research and large-scale simulations
     skills:
     - title: 'Programming for HPC and GPUs - theoretical concepts & principles '
       description: Proficiency in parallel programming paradigms and application of
@@ -381,7 +394,8 @@ categories:
       tools_languages_methods_behaviours: []
       training_resources: []
   - title: Web infrastructure
-    description: ''
+    description: Design, deployment, and maintenance of the technologies that support
+      robust, scalable, and secure online platforms and services
     skills:
     - title: Web protocols
       description: Ability to understand, implement, and manage the various communication
@@ -410,7 +424,8 @@ categories:
       tools_languages_methods_behaviours: []
       training_resources: []
   - title: Cloud infrastructure
-    description: ''
+    description: Expertise in leveraging cloud platforms to enable flexible, scalable,
+      and cost-effective computing, storage, and data services
     skills:
     - title: Cloud computing
       description: Ability needed to work with cloud services, platforms, and technologies
@@ -423,7 +438,8 @@ categories:
       tools_languages_methods_behaviours: []
       training_resources: []
   - title: General systems infrastructure
-    description: ''
+    description: Broad understanding of digital infrastructure—including hardware,
+      networks, and system integration that supports everyday operations and research
     skills:
     - title: Communication protocols
       description: Understanding how information is transmitted, routed, and received
@@ -475,10 +491,12 @@ categories:
       tools_languages_methods_behaviours: []
       training_resources: []
 - title: Professional skills
-  description: ''
+  description: Core capabilities that enable individuals to operate effectively and
+    ethically within complex, multidisciplinary, and evolving professional environments
   subcategories:
   - title: Personal skills
-    description: ''
+    description: Self-management capabilities such as initiative, adaptability, resilience,
+      time management, and a commitment to continuous learning.
     skills:
     - title: Analysing / analytical skills / problem solving
       description: Ability to break down complex problems, assess data and information
@@ -542,7 +560,8 @@ categories:
       tools_languages_methods_behaviours: []
       training_resources: []
   - title: Interpersonal skills
-    description: ''
+    description: Ability to build rapport, demonstrate empathy, navigate social dynamics,
+      and communicate effectively in diverse professional settings
     skills:
     - title: Cultural awareness & sensitivity
       description: Ability to recognise, respect, and appropriately respond to cultural
@@ -565,7 +584,8 @@ categories:
       tools_languages_methods_behaviours: []
       training_resources: []
   - title: Teamwork & collaboration
-    description: ''
+    description: Working constructively and inclusively with others to achieve shared
+      goals, contribute to group problem-solving, and foster a positive team culture
     skills:
     - title: Influencing, persuasion and negotiation
       description: Communicating effectively to shape opinions, reach agreements,
@@ -588,10 +608,13 @@ categories:
       tools_languages_methods_behaviours: []
       training_resources: []
 - title: Leadership & management
-  description: ''
+  description: The capacity to guide people, projects, and organisations with vision
+    and accountability, ensuring strategic alignment, innovation, and the effective
+    use of resources.
   subcategories:
   - title: People & team management
-    description: ''
+    description: Guiding and supporting individuals and teams to achieve their potential,
+      with attention to wellbeing, performance, and professional growth
     skills:
     - title: Team management
       description: Ability to lead, coordinate, and motivate a group of individuals
@@ -638,7 +661,9 @@ categories:
       tools_languages_methods_behaviours: []
       training_resources: []
   - title: Leadership
-    description: ''
+    description: Setting direction, inspiring others, and making strategic decisions
+      that align people and projects with broader institutional or organisational
+      goals
     skills:
     - title: Mentoring & coaching
       description: Providing guidance, support, and advice to a less experienced individual
@@ -675,7 +700,8 @@ categories:
       tools_languages_methods_behaviours: []
       training_resources: []
   - title: Project management
-    description: ''
+    description: Planning, coordinating, and delivering projects effectively within
+      defined scope, time, and resource constraints, while managing risk and quality
     skills:
     - title: Project governance
       description: Ability to establish and manage the frameworks, structures, and
@@ -782,10 +808,12 @@ categories:
       tools_languages_methods_behaviours: []
       training_resources: []
 - title: Domain expertise & research
-  description: ''
+  description: Disciplinary insight and research acumen, enabling the generation of
+    new knowledge, critical analysis, and the application of theory to practice
   subcategories:
   - title: Domain knowledge
-    description: ''
+    description: Deep understanding of the concepts, challenges, and methodologies
+      specific to a particular scientific field
     skills:
     - title: Domain-specific background knowledge
       description: An understanding of concepts, theories, and best practices within
@@ -810,7 +838,8 @@ categories:
       tools_languages_methods_behaviours: []
       training_resources: []
   - title: Research skills
-    description: ''
+    description: Conducting rigorous inquiry, including problem formulation, experimental
+      design, critical analysis, and dissemination of findings
     skills:
     - title: Research methodologies
       description: Expertise in research methodology - formulating testable predictions
@@ -848,10 +877,13 @@ categories:
       tools_languages_methods_behaviours: []
       training_resources: []
 - title: Communication
-  description: ''
+  description: The skill to convey ideas, knowledge, and impact across diverse audiences,
+    fostering understanding, knowledge transfer and engagement within and beyond the
+    organisation
   subcategories:
   - title: Verbal & written communication
-    description: ''
+    description: Articulating complex ideas clearly and effectively through a range
+      of formats and for varied audiences
     skills:
     - title: Public speaking and presentation
       description: Public speaking, presentation and communication skills for engaging
@@ -891,7 +923,8 @@ categories:
       tools_languages_methods_behaviours: []
       training_resources: []
   - title: Community & outreach
-    description: ''
+    description: Engaging with wider communities through knowledge sharing, collaboration,
+      and public engagement to increase the visibility and impact of work
     skills:
     - title: Peer support
       description: Providing emotional, social and practical support to other members
@@ -919,7 +952,9 @@ categories:
       tools_languages_methods_behaviours: []
       training_resources: []
   - title: Training
-    description: ''
+    description: Designing and delivering effective learning experiences that build
+      skills, transfer knowledge, and support capacity and capability development
+      across audiences
     skills:
     - title: Self-learning
       description: Ability to learn independently and teach yourself new technical
