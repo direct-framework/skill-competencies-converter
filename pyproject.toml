@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "skill_competencies_converter"
 dynamic = ["version", "readme"]
 requires-python = ">=3.9"
-description = "Convert skills and competency categories from CSV to YAML format."
+description = "Convert skills and competency categories from CSV to JSON or YAML formats. Creates user profiles on JSON or YAML from CSV format."
 license = { file = "LICENSE" }
 authors = [
     { name = "Finn Bacall" },
@@ -19,6 +19,7 @@ maintainers = [
     { email = "bryald@bas.ac.uk" }
     ]
 dependencies = [
+    "yaml"
 ]
 classifiers = [
   "Development Status :: 3",
@@ -38,6 +39,7 @@ classifiers = [
 
 [project.scripts]
 skill_competencies_converter = "skill_competencies_converter.convert_skills:main"
+create_user_profile =  "skill_competencies_converter.create_user_profile:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
@@ -51,5 +53,5 @@ dev = []
 docs = []
 
 [project.urls]
-"Source" = "https://github.com/softwaresaved/skill-competencies-converter"
-"Issue tracker" = "https://github.com/softwaresaved/skill-competencies-converter/issues"
+"Source" = "https://github.com/direct-framework/skill-competencies-converter"
+"Issue tracker" = "https://github.com/direct-framework/skill-competencies-converter/issues"

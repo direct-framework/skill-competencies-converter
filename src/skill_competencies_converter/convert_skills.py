@@ -1,37 +1,9 @@
+from utilities import *
 import argparse
 import csv
 import importlib
 import os
 import sys
-import urllib.request
-
-# Dynamically figure out import (if package is installed, or this script is run directly)
-if __package__:
-    module_name = f"{__package__}.save"
-else:
-    module_name = "save"
-
-# Define the output formats supported, and the relevant function calls.
-SUPPORTED_OUTPUTS = {
-    "yaml": (module_name, "save_yaml"),
-    "json": (module_name, "save_json"),
-}
-
-
-def is_blank(val):
-    return val is None or val.strip() == ''
-
-
-def read_csv_from_url(sheet_id, sheet_name):
-    sheet_name_encoded = urllib.parse.quote(sheet_name)
-    url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet={sheet_name_encoded}"
-    with urllib.request.urlopen(url) as response:
-        return response.read().decode('utf-8')
-
-
-def read_csv_from_file(filename):
-    with open(filename, newline='', encoding='utf-8') as f:
-        return f.read()
 
 
 def parse_framework(csv_data):
@@ -41,12 +13,6 @@ def parse_framework(csv_data):
 
     reader = csv.reader(csv_data.splitlines())
     headers = next(reader)
-
-    def find_idx(list, str):
-        for i, x in enumerate(list):
-            if str in x.lower():
-                return i
-        raise Exception(f"Couldn't find {str} in {list}")
 
     desc_idx = find_idx(headers, "desc")
     tools_idx = find_idx(headers, "tools")
@@ -88,7 +54,9 @@ def get_parser():
     example_text = """Examples:
 
     %(prog)s <csv_file>
-    %(prog)s <google_sheet_id> <sheet_name>"""
+    %(prog)s <csv_file> --output-path <file-name>
+    %(prog)s <google_sheet_id> <sheet_name>
+    %(prog)s <google_sheet_id> <sheet_name> --print-output"""
     parser = argparse.ArgumentParser(
         description="Convert skills CSV or Google Sheet to YAML/JSON.",
         epilog=example_text,

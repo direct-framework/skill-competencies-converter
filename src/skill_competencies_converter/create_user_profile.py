@@ -1,54 +1,21 @@
+from utilities import *
 import argparse
 import csv
 import importlib
 import os
 import random
 import sys
-import urllib.request
-
-# Dynamically figure out import (if package is installed, or this script is run directly)
-if __package__:
-    module_name = f"{__package__}.save"
-else:
-    module_name = "save"
-
-# Define the output formats supported, and the relevant function calls.
-SUPPORTED_OUTPUTS = {
-    "yaml": (module_name, "save_yaml"),
-    "json": (module_name, "save_json"),
-}
-
-
-def is_blank(val):
-    return val is None or val.strip() == ''
-
-
-def read_csv_from_url(sheet_id, sheet_name):
-    sheet_name_encoded = urllib.parse.quote(sheet_name)
-    url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet={sheet_name_encoded}"
-    with urllib.request.urlopen(url) as response:
-        return response.read().decode('utf-8')
-
-
-def read_csv_from_file(filename):
-    with open(filename, newline='', encoding='utf-8') as f:
-        return f.read()
 
 
 def parse_user_profile(profile_name, csv_data):
     reader = csv.reader(csv_data.splitlines())
     headers = next(reader)
 
-    def find_idx(list, str):
-        for i, x in enumerate(list):
-            if str.lower() in x.lower():
-                return i
-        raise Exception(f"Couldn't find '{str}' in {list}")
-
     category_idx = find_idx(headers, "category")
     subcategory_idx = find_idx(headers, "subcategory")
     skill_idx = find_idx(headers, "skill")
-    # Use the exact profile name to locate column with profile data, else find the first column that contains the word "profile"
+    # Use the exact profile name to locate column with profile data,
+    # else find the first column that contains the word "profile"
     profile_idx = find_idx(headers, profile_name) if profile_name else find_idx(headers, "profile")
 
     user_id = random.randint(0, 100)
@@ -85,7 +52,10 @@ def get_parser():
     example_text = """Examples:
 
     %(prog)s <csv_file>
-    %(prog)s <google_sheet_id> <sheet_name>"""
+    %(prog)s <csv_file> --profile-name <profile_name> --output-path <output_file>
+    %(prog)s <google_sheet_id> <sheet_name>
+    %(prog)s <google_sheet_id> <sheet_name> --print-output
+    """
     parser = argparse.ArgumentParser(
         description="Create user profile file in JSON from skills CSV or Google Sheet file.",
         epilog=example_text,
