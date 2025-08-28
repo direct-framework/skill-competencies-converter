@@ -5,7 +5,6 @@ import os
 import sys
 import urllib.request
 
-
 # Dynamically figure out import (if package is installed, or this script is run directly)
 if __package__:
     module_name = f"{__package__}.save"
@@ -17,6 +16,7 @@ SUPPORTED_OUTPUTS = {
     "yaml": (module_name, "save_yaml"),
     "json": (module_name, "save_json"),
 }
+
 
 def is_blank(val):
     return val is None or val.strip() == ''
@@ -34,7 +34,7 @@ def read_csv_from_file(filename):
         return f.read()
 
 
-def parse_csv(csv_data):
+def parse_framework(csv_data):
     output = {
         'categories': []
     }
@@ -132,7 +132,7 @@ def main():
         parser.print_help()
         sys.exit(1)
 
-    output = parse_csv(csv_content)
+    output = parse_framework(csv_content)
 
     # Get the output extension (whether JSON or yml)
     _, ext = os.path.splitext(args.output_path)

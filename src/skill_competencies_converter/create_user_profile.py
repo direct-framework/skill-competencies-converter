@@ -6,7 +6,6 @@ import random
 import sys
 import urllib.request
 
-
 # Dynamically figure out import (if package is installed, or this script is run directly)
 if __package__:
     module_name = f"{__package__}.save"
@@ -18,6 +17,7 @@ SUPPORTED_OUTPUTS = {
     "yaml": (module_name, "save_yaml"),
     "json": (module_name, "save_json"),
 }
+
 
 def is_blank(val):
     return val is None or val.strip() == ''
@@ -35,8 +35,7 @@ def read_csv_from_file(filename):
         return f.read()
 
 
-def parse_user_profile_csv(profile_name, csv_data):
-
+def parse_user_profile(profile_name, csv_data):
     reader = csv.reader(csv_data.splitlines())
     headers = next(reader)
 
@@ -135,7 +134,7 @@ def main():
         sys.exit(1)
 
     user_profile_name = args.profile_name
-    output = parse_user_profile_csv(user_profile_name, csv_content)
+    output = parse_user_profile(user_profile_name, csv_content)
 
     # Get the output extension (whether JSON or yml)
     _, ext = os.path.splitext(args.output_path)
