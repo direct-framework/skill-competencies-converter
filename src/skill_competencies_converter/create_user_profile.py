@@ -68,7 +68,7 @@ def get_parser():
     )
     parser.add_argument(
         "--profile-name",
-        help="Profile header/column name to read skill level values from"
+        help="Profile header/column name to read skill level values from. If not provided, use the first column that contains the word 'profile'."
     )
     parser.add_argument(
         "--output-path",
