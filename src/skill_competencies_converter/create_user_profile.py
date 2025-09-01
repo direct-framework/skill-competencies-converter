@@ -1,4 +1,4 @@
-from utilities import *
+from skill_competencies_converter.utilities import *
 import argparse
 import csv
 import importlib

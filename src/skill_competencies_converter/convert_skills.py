@@ -1,4 +1,4 @@
-from utilities import *
+from skill_competencies_converter.utilities import *
 import argparse
 import csv
 import importlib
@@ -69,8 +69,8 @@ def get_parser():
     )
     parser.add_argument(
         "--output-path",
-        default="data.json",
-        help="Output filepath. Default: ./data.json"
+        default="framework.json",
+        help="Output filepath. Default: ./framework.json"
     )
     parser.add_argument(
         "--print-output",

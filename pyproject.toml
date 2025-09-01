@@ -19,7 +19,7 @@ maintainers = [
     { email = "bryald@bas.ac.uk" }
     ]
 dependencies = [
-    "pyyaml"
+    "pyyaml",
 ]
 classifiers = [
   "Development Status :: 3",
