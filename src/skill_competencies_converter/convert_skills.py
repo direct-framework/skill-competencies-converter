@@ -1,48 +1,92 @@
-from skill_competencies_converter.utilities import *
+from skill_competencies_converter.utilities import (
+    is_blank,
+    read_csv_from_file,
+    read_csv_from_url,
+    SUPPORTED_OUTPUTS,
+)
 import argparse
 import csv
 import importlib
 import os
 import sys
+from pathlib import Path
 
 
-def parse_framework(csv_data):
-    output = {
-        'categories': []
-    }
+def parse_core_framework(csv_data):
+    output = {"competency_domains": [], "competencies": [], "skills": []}
 
     reader = csv.reader(csv_data.splitlines())
     headers = next(reader)
 
-    desc_idx = find_idx(headers, "desc")
-    tools_idx = find_idx(headers, "tools")
-    training_idx = find_idx(headers, "training")
+    desc_idx = headers.index("description")
+    related_skills_idx = headers.index("related_skills")
+    slug_idx = headers.index("slug")
+    tools_idx = headers.index("tools_languages_methods_behaviours")
+    learning_idx = headers.index("learning_resources")
 
-    for row in reader:
+    for idx, row in enumerate(reader):
         if not is_blank(row[0]):
-            category = {
-                'title': row[0],
-                'description': row[desc_idx],
-                'subcategories': []
+            competency_domain = {
+                "name": row[0],
+                "description": row[desc_idx],
+                "slug": row[slug_idx],
+                "rank": idx,
             }
-            output['categories'].append(category)
+            output["competency_domains"].append(competency_domain)
         if not is_blank(row[1]):
-            subcategory = {
-                'title': row[1],
-                'description': row[desc_idx],
-                'skills': []
+            competency = {
+                "name": row[1],
+                "description": row[desc_idx],
+                "slug": row[slug_idx],
+                "competency_domain": competency_domain["slug"],
             }
-            category['subcategories'].append(subcategory)
+            output["competencies"].append(competency)
         if not is_blank(row[2]):
             skill = {
-                'title': row[2],
-                'description': row[desc_idx],
-                'tools_languages_methods_behaviours': [],  # row[tools_idx], - currently set to empty list
-                'training_resources': []  # row[training_idx] - currently set to empty list
+                "name": row[2],
+                "description": row[desc_idx],
+                "related_skills": row[related_skills_idx],
+                "slug": row[slug_idx],
+                "competency": competency["slug"],
+                "tools_languages_methods_behaviours": row[tools_idx],
+                "learning_resources": row[learning_idx],
             }
-            subcategory['skills'].append(skill)
+            output["skills"].append(skill)
         else:
             continue
+
+    return output
+
+
+def parse_csv(csv_data) -> list[str, str]:
+    reader = csv.reader(csv_data.splitlines())
+    headers = next(reader)
+
+    # Remove all empty values from the headers
+    if "" in headers:
+        headers = headers[: headers.index("")]
+
+    output = []
+    for row in reader:
+        output.append({header.lower(): row[idx] for idx, header in enumerate(headers)})
+    return output
+
+
+def parse_framework(sheet_id):
+    csv_data = read_csv_from_url(sheet_id, "Competency framework - v1.1")
+    output = parse_core_framework(csv_data)
+
+    csv_data = read_csv_from_url(sheet_id, "Skills Scale - v1.1")
+    output["skill_levels"] = parse_csv(csv_data)
+
+    csv_data = read_csv_from_url(sheet_id, "Tools and Behaviours - v1.1")
+    output["tools_languages_methods_behaviours"] = parse_csv(csv_data)
+
+    csv_data = read_csv_from_url(sheet_id, "Learning Resources - v1.1")
+    output["learning_resources"] = parse_csv(csv_data)
+
+    csv_data = read_csv_from_url(sheet_id, "Providers - v1.1")
+    output["providers"] = parse_csv(csv_data)
 
     return output
 
@@ -60,23 +104,27 @@ def get_parser():
     parser = argparse.ArgumentParser(
         description="Convert skills CSV or Google Sheet to YAML/JSON.",
         epilog=example_text,
-        formatter_class=argparse.RawDescriptionHelpFormatter
+        formatter_class=argparse.RawDescriptionHelpFormatter,
     )
     parser.add_argument(
-        "inputs",
-        nargs="*",
-        help="Either CSV file path or Google Sheet ID and sheet name"
+        "--google-sheet",
+        help="Google Sheet ID. Processes full framework based on assumed sheet names.",
+    )
+    parser.add_argument(
+        "--legacy-csv",
+        default=None,
+        help="CSV filepath for V1 of framework structure.",
     )
     parser.add_argument(
         "--output-path",
         default="framework.json",
-        help="Output filepath. Default: ./framework.json"
+        help="Output filepath. Default: ./framework.json",
     )
     parser.add_argument(
         "--print-output",
         default=False,
         action=argparse.BooleanOptionalAction,
-        help="Print output to stdout"
+        help="Print output to stdout",
     )
 
     return parser
@@ -89,18 +137,14 @@ def main():
     parser = get_parser()
     args = parser.parse_args()
 
-    if len(args.inputs) == 1:
-        filename = args.inputs[0]
-        csv_content = read_csv_from_file(filename)
-    elif len(args.inputs) == 2:
-        sheet_id = args.inputs[0]
-        sheet_name = args.inputs[1]
-        csv_content = read_csv_from_url(sheet_id, sheet_name)
+    if args.legacy_csv:
+        csv_content = read_csv_from_file(args.legacy_csv)
+        output = parse_core_framework(csv_content)
+    elif args.google_sheet:
+        output = parse_framework(args.google_sheet)
     else:
         parser.print_help()
         sys.exit(1)
-
-    output = parse_framework(csv_content)
 
     # Get the output extension (whether JSON or yml)
     _, ext = os.path.splitext(args.output_path)
@@ -118,6 +162,11 @@ def main():
     module = importlib.import_module(module_name)
     save_func = getattr(module, func_name)
     save_func(output, args.output_path, args.print_output)
+
+    if args.google_sheet:
+        path = Path(args.output_path)
+        for key, val in output.items():
+            save_func(val, path.with_stem(path.stem + f"-{key}"), args.print_output)
 
 
 if __name__ == "__main__":
