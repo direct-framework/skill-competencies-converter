@@ -97,10 +97,10 @@ def get_parser():
     """
     example_text = """Examples:
 
-    %(prog)s <csv_file>
-    %(prog)s <csv_file> --output-path <file-name>
-    %(prog)s <google_sheet_id> <sheet_name>
-    %(prog)s <google_sheet_id> <sheet_name> --print-output"""
+    %(prog)s --google-sheet <google_sheet_id>
+    %(prog)s --legacy-csv <csv_file>
+    %(prog)s --legacy-csv <csv_file> --output-path <file-name>
+    %(prog)s --google-sheet <google_sheet_id> --print-output"""
     parser = argparse.ArgumentParser(
         description="Convert skills CSV or Google Sheet to YAML/JSON.",
         epilog=example_text,
