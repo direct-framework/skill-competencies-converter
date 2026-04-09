@@ -1,4 +1,4 @@
-from skill_competencies_converter.utilities import *
+from utilities import *
 import argparse
 import csv
 import importlib
@@ -11,8 +11,8 @@ def parse_user_profile(profile_name, csv_data):
     reader = csv.reader(csv_data.splitlines())
     headers = next(reader)
 
-    category_idx = find_idx(headers, "category")
-    subcategory_idx = find_idx(headers, "subcategory")
+    category_idx = find_idx(headers, "competency_domain")
+    subcategory_idx = find_idx(headers, "competency")
     skill_idx = find_idx(headers, "skill")
     # Use the exact profile name to locate column with profile data,
     # else find the first column that contains the word "profile"

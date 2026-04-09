@@ -1,4 +1,4 @@
-from skill_competencies_converter.utilities import *
+from utilities import *
 import argparse
 import csv
 import importlib
@@ -8,39 +8,39 @@ import sys
 
 def parse_framework(csv_data):
     output = {
-        'categories': []
+        'competency_domains': []
     }
 
     reader = csv.reader(csv_data.splitlines())
     headers = next(reader)
 
-    desc_idx = find_idx(headers, "desc")
-    tools_idx = find_idx(headers, "tools")
-    training_idx = find_idx(headers, "training")
+    desc_idx = find_idx(headers, "description")
+    tools_languages_methodologies_idx = find_idx(headers, "tools_languages_methodologies")
+    learning_resources_idx = find_idx(headers, "learning_resources")
 
     for row in reader:
         if not is_blank(row[0]):
-            category = {
+            competency_domain = {
                 'title': row[0],
                 'description': row[desc_idx],
-                'subcategories': []
+                'competencies': []
             }
-            output['categories'].append(category)
+            output['competency_domains'].append(competency_domain)
         if not is_blank(row[1]):
-            subcategory = {
+            competency = {
                 'title': row[1],
                 'description': row[desc_idx],
                 'skills': []
             }
-            category['subcategories'].append(subcategory)
+            competency_domain['competencies'].append(competency)
         if not is_blank(row[2]):
             skill = {
                 'title': row[2],
                 'description': row[desc_idx],
-                'tools_languages_methods_behaviours': [],  # row[tools_idx], - currently set to empty list
-                'training_resources': []  # row[training_idx] - currently set to empty list
+                'tools_languages_methodologies': row[tools_languages_methodologies_idx],
+                'training_resources': row[learning_resources_idx]
             }
-            subcategory['skills'].append(skill)
+            competency['skills'].append(skill)
         else:
             continue
 
