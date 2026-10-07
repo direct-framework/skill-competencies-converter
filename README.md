@@ -1,3 +1,8 @@
+> [!IMPORTANT]  
+> This package is no longer used as we no longer use the Google spreadsheet to maintain the framework data definitions and then convert to yaml for uploads to the DIRECT webapp's database.
+>
+> DIRECT webapp's database is now the main source of truth with an additional export/backup of the framework data located in the [framework repository](https://github.com/direct-framework/digital-research-competencies-framework/tree/main/framework).
+
 # Code to extract skill & competencies
 
 Python package to convert skills and competency categories from CSV to JSON/YAML format.
